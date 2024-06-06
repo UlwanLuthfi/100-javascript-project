@@ -2,10 +2,12 @@
 
 import { Trash2 } from 'lucide-react';
 import { useState } from 'react';
+import clsx from 'clsx';
 
 type Task = {
   taskId: number;
   taskName: string;
+  completed: boolean;
 };
 
 export default function TodoList() {
@@ -15,7 +17,7 @@ export default function TodoList() {
   function addTask() {
     if (!taskName) return;
 
-    const newTask = { taskId: Date.now(), taskName };
+    const newTask = { taskId: Date.now(), taskName, completed: false };
 
     setTasks((prev) => [...prev, newTask]);
     setTaskName('');
@@ -23,6 +25,14 @@ export default function TodoList() {
 
   function removeTask(taskId: number) {
     setTasks((prev) => prev.filter((task) => task.taskId !== taskId));
+  }
+
+  function toggleTaskCompletion(taskId: number) {
+    setTasks((prev) =>
+      prev.map((task) =>
+        task.taskId === taskId ? { ...task, completed: !task.completed } : task
+      )
+    );
   }
 
   return (
@@ -58,8 +68,18 @@ export default function TodoList() {
               key={task.taskId}
               className="flex items-center justify-between border-b pb-1"
             >
-              <span className="p-2">{task.taskName}</span>
-              <button onClick={() => removeTask(task.taskId)} className="bg-blue-500 p-3 text-white rounded-md">
+              <span
+                onClick={() => toggleTaskCompletion(task.taskId)}
+                className={clsx('p-2 cursor-pointer', {
+                  'line-through': task.completed,
+                })}
+              >
+                {task.taskName}
+              </span>
+              <button
+                onClick={() => removeTask(task.taskId)}
+                className="bg-blue-500 p-3 text-white rounded-md"
+              >
                 <Trash2 />
               </button>
             </div>
