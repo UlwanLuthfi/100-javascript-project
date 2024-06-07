@@ -12,4 +12,31 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+
+  .bg-2-color {
+    background: linear-gradient(#3b82f6, #3b82f6) 0 100% no-repeat;
+    background-size: 100% 50%;
+  }
+
+  @keyframes roll {
+    0% {
+      transform: rotate(0);
+    }
+    25% {
+      transform: rotate(30deg);
+    }
+    50% {
+      transform: rotate(-30deg);
+    }
+    75% {
+      transform: rotate(30deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+
+  .animate-roll {
+    animation: roll 1s ease-in-out;
+  }
 }
