@@ -6,6 +6,7 @@ export default function Home() {
       <Link href="/todo-list">Todo List</Link>
       <Link href="/product-filter-search">Product Filter Search</Link>
       <Link href="/roll-the-dice">Roll the Dice</Link>
+      <Link href="/age-calculator">Age Calculator</Link>
     </main>
   );
 }
