@@ -7,6 +7,7 @@ export default function Home() {
       <Link href="/product-filter-search">Product Filter Search</Link>
       <Link href="/roll-the-dice">Roll the Dice</Link>
       <Link href="/age-calculator">Age Calculator</Link>
+      <Link href="/number-counting-animation">Number Counting Animation</Link>
     </main>
   );
 }
