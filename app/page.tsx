@@ -8,6 +8,7 @@ export default function Home() {
       <Link href="/roll-the-dice">Roll the Dice</Link>
       <Link href="/age-calculator">Age Calculator</Link>
       <Link href="/number-counting-animation">Number Counting Animation</Link>
+      <Link href="/highlight-searched-text">Highlight Searched Text</Link>
     </main>
   );
 }

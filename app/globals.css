@@ -18,6 +18,11 @@
     background-size: 100% 50%;
   }
 
+  .bg-2-color-vertical {
+    background: linear-gradient(to right, #3b82f6, #3b82f6) 0 100% no-repeat;
+    background-size: 50% 100%;
+  }
+
   @keyframes roll {
     0% {
       transform: rotate(0);
