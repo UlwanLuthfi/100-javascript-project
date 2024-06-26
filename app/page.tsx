@@ -9,6 +9,7 @@ export default function Home() {
       <Link href="/age-calculator">Age Calculator</Link>
       <Link href="/number-counting-animation">Number Counting Animation</Link>
       <Link href="/highlight-searched-text">Highlight Searched Text</Link>
+      <Link href="/weather-app">Weather App</Link>
     </main>
   );
 }
